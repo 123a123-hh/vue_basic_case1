@@ -1,22 +1,32 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-
+import Main from '../components/main.vue'
+import welcome from '../components/welcome.vue'
+import userM from '../components/userM.vue'
+import about from '../components/about.vue'
+import adM from '../components/adM.vue'
+import centerM from '../components/centerM.vue'
+import powerM from '../components/powerM.vue'
+import roleM from '../components/roleM.vue'
+import wordM from '../components/wordM.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  { path: '/', redirect: '/mainpage' },
   {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/mainpage',
+    component: Main,
+    redirect: '/mainpage/1',
+    children: [
+      { path: '/mainpage/welcome', component: welcome },
+      { path: '/mainpage/1', component: userM },
+      { path: '/mainpage/2', component: powerM },
+      { path: '/mainpage/3', component: roleM },
+      { path: '/mainpage/4', component: centerM },
+      { path: '/mainpage/5', component: adM },
+      { path: '/mainpage/6', component: wordM },
+      { path: '/mainpage/7', component: about }
+    ]
   }
 ]
 
