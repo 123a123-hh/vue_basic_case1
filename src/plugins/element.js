@@ -24,5 +24,5 @@ Vue.use(Pagination)
 Vue.use(Dialog)
 Vue.use(Form)
 Vue.use(FormItem)
-Vue.prototype.$confirm = MessageBox
+Vue.prototype.$confirm = MessageBox.confirm
 Vue.prototype.$message = Message
