@@ -6,7 +6,7 @@ import userM from '../components/userM.vue'
 import about from '../components/about.vue'
 import adM from '../components/adM.vue'
 import centerM from '../components/centerM.vue'
-import powerM from '../components/powerM.vue'
+import powerM from '../components/power/powerM.vue'
 import roleM from '../components/roleM.vue'
 import wordM from '../components/wordM.vue'
 Vue.use(VueRouter)
