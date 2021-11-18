@@ -4,7 +4,7 @@
       <el-header>
         <div class="leftHeader">
           <img src="../assets/imgs/PODIA_logo.png" alt="" />
-          <span>后台管理系统</span>
+          <span>后台管理系统111</span>
         </div>
       </el-header>
       <el-container>
@@ -82,6 +82,7 @@ export default {
     }
   },
   created () {
+    var ii = 11
     this.activePath = window.sessionStorage.getItem('activePath')
     if (this.activePath == null) {
       this.activePath = '1'
